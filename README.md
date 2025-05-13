@@ -183,7 +183,7 @@ SOFTWARE.
 ---
 
 <div align="center">
-    Made with ❤️ by Your Name
+    Made with ❤️ by Shivansh Ghelani
     <br>
     <br>
     <img src="Images/1.jpg" alt="Myra Rover Front View" width="400"/>
