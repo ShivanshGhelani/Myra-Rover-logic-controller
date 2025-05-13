@@ -10,6 +10,52 @@
 
 This project implements the logic controller for the Myra Rover, an ESP32-based autonomous rover with multiple control modes. The controller manages movement commands, obstacle avoidance, and different operation modes using ESP-NOW protocol for communication.
 
+## Related Repositories
+
+The Myra Rover project consists of multiple interconnected components that work together to create a complete autonomous rover system:
+
+### [Motor Controller](https://github.com/ShivanshGhelani/Myra-Rover-motor-controller)
+- Handles motor driver control and power management
+- Interprets movement commands from Logic Controller
+- Manages PWM signals for precise motor control
+- Implements safety features and emergency stops
+
+### [Ground Controller](https://github.com/ShivanshGhelani/Myra-Rover-ground-controller)
+- Provides user interface for manual control
+- Displays real-time sensor data and rover status
+- Processes voice commands for rover control
+- Manages WiFi communication with Logic Controller
+
+### [Main Project Repository](https://github.com/ShivanshGhelani/Myra-Rover)
+- Complete system architecture and documentation
+- Hardware assembly and wiring guides
+- Communication protocol specifications
+- Setup and configuration instructions
+- Integration guidelines for all components
+- Project roadmap and development notes
+
+### System Interaction Flow
+```
+Ground Controller                Logic Controller (Current)              Motor Controller
+     |                                     |                                  |
+     |        WiFi Commands                |         ESP-NOW Protocol         |
+     | ---------------------------------> | --------------------------------> |
+     |                                    |                                   |
+     |      Status & Sensor Data          |         Movement Feedback        |
+     | <--------------------------------- | <-------------------------------- |
+     |                                    |                                   |
+```
+
+The Logic Controller (this repository) acts as the central brain of the system, processing commands from the Ground Controller and making intelligent decisions about movement and navigation, which are then executed by the Motor Controller.
+
+Visit the main repository for comprehensive information about the entire project, including:
+- System Architecture
+- Complete Setup Instructions
+- Integration Guide
+- Project Documentation
+- Hardware Requirements
+- Assembly Instructions
+
 ## Features
 
 - **Multiple Control Modes:**
